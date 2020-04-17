@@ -1,0 +1,24 @@
+{
+  "name": "node_back",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vishal19197/node_back.git"
+  },
+  "author": "vishal patel",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vishal19197/node_back/issues"
+  },
+  "homepage": "https://github.com/vishal19197/node_back#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "mongodb": "^3.5.6",
+    "nodemon": "^2.0.3"
+  }
+}

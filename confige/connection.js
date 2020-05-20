@@ -1,15 +1,11 @@
-const mongo = require('mongodb').MongoClient
+const mongoose = require('mongoose');
 
-const url = `mongodb://localhost:27017`
+mongoose.connect('mongodb://localhost/employee', { 
+    useNewUrlParser: true,
+    useUnifiedTopology: true
+ });
 
-mongo.connect(url,{
-    useNewUrlParser:true,
-    useUnifiedTopology:true
-},(err, client) =>{
-    if (err) {
-        console.log("connection error =>",err);
-        return
-    }
-    const db = client.db('employee')
-    console.log("connected...!") 
-})
+const db = mongoose.connection
+
+db.once('open', () => console.log("conneced...!"));
+db.on('error', (error) => console.log("connection error", error));
